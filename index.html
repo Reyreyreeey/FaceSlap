@@ -1,0 +1,513 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+    <!-- bootstrap -->
+    <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
+    crossorigin="anonymous"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css">
+    <title>FaceSlap</title>
+</head>
+<body class="bg-gray">
+   <!-- ================= App Bar ================= -->
+   <div class="bg-white d-flex align-center fixed-top shadow" style="min-height: 56px; z-index: 5;">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <!-- search  -->
+            <div class="col d-flex align-items-center">
+                <!-- logo  -->
+                <i class="fa-brands fa-facebook text-primary" style="font-size: 3rem;"></i>
+                <!-- search bar  -->
+                <div class="input-group ms-2">
+                    <!-- mobile  -->
+                    <span class="input-group-preperd d-lg-none" 
+                    id= "searchMenu"
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                    type="button"
+                    data-bs-auto-close="outside">
+                        <div class="input-group-text bg-gray border-0 rounded-circle" 
+                        style="min-height: 40px;">
+                            <i class="fa-solid fa-magnifying-glass text-muted"></i>
+                        </div>
+                    </span>
+                    <!-- desktop -->
+                    <span class="input-group-preperd d-none d-lg-block" 
+                    id= "searchMenu"
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                    type="button"
+                    data-bs-auto-close="outside">
+                        <div class="input-group-text bg-gray border-0 rounded-pill" 
+                        style="min-height: 40px; min-width: 230px;">
+                            <i class="fa-solid fa-magnifying-glass me-2 text-muted"></i>
+                            <p class="m-0 fs-7 text-muted">Search FaceSlap</p>
+                        </div>
+                    </span>
+                    <!-- search dropdown -->
+                        <ul class="dropdown-menu border-0 shodow p-3 overflow-auto" aria-labelledby="searchMenu" style="width: 20em; max-height: 600px;">
+                          <!-- search input  -->
+                            <li>
+                                <input type="text" class=" border-0 rounded-pill bg-gray dropdown-item" placeholder="Search FaceSlap..." autofocus>
+                            </li>
+                          <!-- search result  -->
+                          <!-- result1 -->
+                          <li class="ny-4">
+                            <div class="alert fade show dropdown-item p1 m-0 d-flex align-center justify-content-between" role="alert">
+                               <div class="d-flex align-item-center">
+                                <img src="https:/source.unsplash.com/random/1" alt="avater" class="rounded-circle me-2" 
+                                style="width: 35px;height: 35px;object-fit: cover;">
+                                <p class="n-0">Lorem ipsum</p>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                          </li>
+                          <!-- result2 -->
+                          <li class="ny-4">
+                            <div class="alert fade show dropdown-item p1 m-0 d-flex align-center justify-content-between" role="alert">
+                               <div class="d-flex align-item-center">
+                                <img src="https:/source.unsplash.com/random/2" alt="avater" class="rounded-circle me-2" 
+                                style="width: 35px;height: 35px;object-fit: cover;">
+                                <p class="n-0">Lorem ipsum</p>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                          </li>
+                          <!-- result3 -->
+                          <li class="ny-4">
+                            <div class="alert fade show dropdown-item p1 m-0 d-flex align-center justify-content-between" role="alert">
+                               <div class="d-flex align-item-center">
+                                <img src="https:/source.unsplash.com/random/3" alt="avater" class="rounded-circle me-2" 
+                                style="width: 35px;height: 35px;object-fit: cover;">
+                                <p class="n-0">Lorem ipsum</p>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                              </div>
+                          </li>
+                        </ul>
+                      
+                    <!-- end  -->
+                </div>
+            </div>
+            <!-- nav  -->
+            <div class="col d-none d-lg-flex justify-content-center">
+                <!-- home -->
+                <div class="mx-4 nav__btn nav__btn-active">
+                    <button class="btn px-4">
+                        <i class="fa-solid fa-house text-muted fs-4"></i>
+                    </button>
+                </div>
+                <!-- market -->
+                <div class="mx-4 nav__btn ">
+                    <button class="btn px-4">
+                        <i class="fas fa-store text-muted fs-4"></i>
+                    </button>
+                </div>
+                <!-- group -->
+                <div class="mx-4 nav__btn">
+                    <button type="button" class="btn px-4">
+                        <i class="fas fa-users position-relative text-muted fs-4">
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" 
+                            style="font-size: .5rem;">
+                                1
+                                <span class="visually-hidden"></span>
+                              </span>
+                        </i>
+                        
+                      </button>
+                </div>
+                <!-- gaming -->
+                <div class="mx-4 nav__btn ">
+                    <button class="btn px-4">
+                        <i class="fas fa-gamepad text-muted fs-4"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- menus  -->
+            <div class="col d-flex align-items-center justify-content-end">
+                <!-- avatar -->
+                <div class="d-none d-xl-flex align-item-center justify-content-center">
+                    <img src="https://source.unsplash.com/collection/face-portrait" 
+                    alt="avatar" 
+                    class="rounded-circle me-2"
+                    style="width: 38px;height: 38px;object-fit: cover;">
+                    <p class="m-0">Rey</p>
+                    
+                </div>
+                <!-- main menu  -->
+                <div class="d-flex align-items-center justify-content-center p-1 mx-2 bg-gray rounded-circle"
+                style="width: 38px;height: 38px; object-fit: cover;"
+                id="mainMenu" data-bs-toggle="dropdown" aria-expanded="false"
+                type="button">
+                    <i class="fa-solid fa-ellipsis"></i>   
+                </div>
+                <!-- main menu dd  -->
+                
+                    
+                    <ul class="dropdown-menu border-0 shadow p-3 overflow-auto" aria-labelledby="mainMenu"
+                    style="width: 23em; max-height: 600px;">
+                      <!-- menu  -->
+                      <div>
+                        <!-- header  -->
+                        <li class="p-1 mx-2">
+                            <h2>Menu</h2>
+                        </li>
+                        <!-- search  -->
+                        <li class="p-1">
+                            <div class="input-group-text bg-gray border-0 rounded-pill"
+                            style="min-height: 40px; min-width: 230px;">
+                            <i class="fas fa-search me-2 text-muted"></i>
+                            <input type="text" class="form-control rounded-pill border-0 bg-gray"
+                            placeholder="Search Menu">
+
+                            </div>
+                        </li>
+                        <!-- social items  -->
+                        <h4 class="m-2">Social</h4>
+                        <!-- s 1 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- s 2 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- s 3 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- s 4 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- s 5 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- s 6 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- ent items  -->
+                        <hr>
+                        <h4 class="m-2">Entertainment</h4>
+                        <!-- e 1 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- e 2 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                        <!-- e 3 -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center justify-content-between">
+                            <div class="p-2">
+                                <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yj/r/Y7r38CcFEw5.png" 
+                                alt="icon"
+                                class="rounded-circle"
+                                style="width: 48px; height: 48px;object-fit: cover;">
+                            </div>
+                            <div>
+                                <p class="m-0">Campus</p>
+                                <span class="fs-7 text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. </span>
+                            </div>
+                            </a>
+                        </li>
+                      </div>
+                      <hr>
+                      <!-- create  -->
+                      <div>
+                        <!-- header  -->
+                        <li class="p-1 mx-2">
+                            <h2>Create</h2>
+                        </li>
+                        <!-- c 1  -->
+                        <li class="my-2 p-1">
+                          <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                            <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                            style="width: 38px;height: 38px;">
+                                <i class="fa-solid fa-pen-to-square"></i>
+
+                            </div>
+                            <div>
+                                <p class="m-0">Post</p>
+                            </div>
+                          </a> 
+                        </li>
+                        <!-- c 2  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <!-- c 3  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <hr>
+                          <!-- c 4  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <!-- c 5  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <!-- c 6  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <!-- c 7  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <!-- c 8  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                          <!-- c 9  -->
+                        <li class="my-2 p-1">
+                            <a href="#" class="text-decoration-none text-dark d-flex align-items-center">
+                              <div class="d-flex align-items-center justify-content-center rounded-circle bg-gray p-1 mx-3"
+                              style="width: 38px;height: 38px;">
+                                  <i class="fa-solid fa-pen-to-square"></i>
+  
+                              </div>
+                              <div>
+                                  <p class="m-0">Post</p>
+                              </div>
+                            </a> 
+                          </li>
+                      </div>
+
+
+
+                    </ul>
+                  
+                <!-- chat  -->
+                    <div class="
+                    d-flex 
+                    align-items-center 
+                    justify-content-center 
+                    p-1 
+                    mx-2 
+                    bg-gray 
+                    rounded-circle"
+                    style="width: 38px;height: 38px; object-fit: cover;"
+                    id="chatMenu" 
+                    data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                    type="button"
+                    data-bs-auto-close="outside">
+                        <i class="fa-solid fa-comment"></i>   
+                    </div>
+                    <!-- chat dd  -->
+                    <ul class="dropdown-menu border-0 shadow p-3 overflow-auto" 
+                    aria-labelledby="chatMenu"
+                    style="width: 23em; max-height: 600px;">
+                      <!-- chat header  -->
+                      <li class="p-1">
+                        <div class="d-flex justify-content-between">
+                            <h2>Message</h2>
+                            <!-- icons -->
+                            <div>
+                                <!-- setting -->
+                                <i class="fas fa-ellipsis-h text-muted mx-2"type="button"data-bs-toggle="dropdown"></i> 
+                                <!-- settings dd  -->
+                                <ul class="dropdown-menu shadow" style="width: 18em;">
+                                <!-- title  -->
+                                <div class="p-2">
+                                    <h5>Chat Settings</h5>
+                                    <span class="text-muted fs-7">
+                                        Lorem ipsum dolor sit amet.
+                                    </span>
+                                </div>
+                                <!-- item 1 -->
+                                
+                                </ul>
+                                <!-- expand -->
+                                <i class="fas fa-maximize text-muted mx-2"></i> 
+                                <!-- new mesaage  -->
+                                <i class="fas fa-edit text-muted mx-2"></i> 
+                            </div>
+                        </div>
+                      </li>
+                      <!-- search -->
+                      <!-- message 1 -->
+                    </ul>
+                <!-- notif  --> 
+                <!-- second menu  -->
+            </div>
+        </div>
+    </div>
+   </div>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
+    crossorigin="anonymous"></script>
+    <!-- main js -->
+    <script src="./main.js"></script>
+</body>
+</html>
